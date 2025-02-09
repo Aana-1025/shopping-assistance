@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Assistant</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Shopping Assistant</h1>
+      </header>
+      
+      <main>
+        <section class="shopping-lists">
+          <h2>My Shopping Lists</h2>
+          <div class="list-container">
+            <div class="new-list">
+              <input type="text" id="listName" placeholder="New List Name">
+              <button>Create List</button>
+            </div>
+            <div id="shoppingLists"></div>
+          </div>
+        </section>
+
+        <section class="nearby-stores">
+          <h2>Nearby Stores</h2>
+          <div class="store-search">
+            <input type="text" id="searchRadius" placeholder="Search radius in km" value="5">
+            <button id="findStores">Find Stores</button>
+          </div>
+          <div id="storesList" class="stores-list"></div>
+        </section>
+
+        <section class="product-comparison">
+          <h2>Product Comparison</h2>
+          <div class="comparison-table">
+            <table id="compareTable">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Store</th>
+                  <th>Rating</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="compareBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="price-alerts">
+          <h2>Price Alerts</h2>
+          <div class="alerts-container" id="alertsContainer"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
